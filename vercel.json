@@ -2,14 +2,14 @@
     "version": 2,
     "builds": [
       {
-        "src": "VaarBackend.js",
+        "src": "index.js",
         "use": "@now/node"
       }
     ],
     "routes": [
       {
-        "src": "/",
-        "dest": "VaarBackend.js"  
+        "src": "/(.*)",
+        "dest": "index.js"  
       }
     ]
   }
