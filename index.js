@@ -10,7 +10,7 @@ require('./db/conn');
 app.use(express.json());
 const allowedOrigins = [
     "http://localhost:5173",
-    "https://vaar-web-project-three.vercel.app"
+    "https://vaar-web-project.vercel.app/"
   ];
   app.use(
     cors({
