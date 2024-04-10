@@ -3,9 +3,9 @@ const router = express.Router();
 const Blog = require('../modal/BlogSchema'); // Import the Blog model
 require('../db/conn');
 
-router.get('/', (req, res) => {
-    res.send('Hello Vaar router');
-});
+// router.get('/', (req, res) => {
+//     res.send('Hello Vaar router');
+// });
 router.get('/blogs', async (req, res) => {
     try {
       const blogs = await Blog.find();
