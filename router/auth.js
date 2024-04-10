@@ -6,7 +6,7 @@ require('../db/conn');
 // router.get('/', (req, res) => {
 //     res.send('Hello Vaar router');
 // });
-router.get('/blogs', async (req, res) => {
+router.get('/', async (req, res) => {
     try {
       const blogs = await Blog.find();
       res.json(blogs);
