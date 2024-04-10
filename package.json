@@ -3,13 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "functions": {
-    "api": {
-      "runtime": "nodejs20.x",
-      "timeout": 30 
-    }
-  
-  },
+ 
   
   "scripts": {
     "start":"nodemon index.js",
