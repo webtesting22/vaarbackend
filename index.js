@@ -9,11 +9,12 @@ dotenv.config({ path: './config.env' });
 require('./db/conn');
 app.use(express.json());
 const allowedOrigins = [
-    "http://localhost:5173",
-    "https://vaar-web-project.vercel.app",
-    "https://www.vaar.co/",
+    // "http://localhost:5173",
+    // "https://vaar-web-project.vercel.app",
+    // "https://www.vaar.co/",
     "*"
   ];
+  // const allowed_headers=["*"]
   app.use(
     cors({
       origin: allowedOrigins,
