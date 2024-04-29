@@ -11,7 +11,8 @@ app.use(express.json());
 const allowedOrigins = [
     "http://localhost:5173",
     "https://vaar-web-project.vercel.app",
-    "https://www.vaar.co/"
+    "https://www.vaar.co/",
+    "*"
   ];
   app.use(
     cors({
