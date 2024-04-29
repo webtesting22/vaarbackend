@@ -14,9 +14,11 @@ router.get('/blogs', async (req, res) => {
       res.status(500).json({ message: err.message });
     }
   });
-router.post('/hello', async (req, res) => {
-    const { blogTitle, blogSubtitle, blogDescription, blogComment } = req.body;
-
+  router.post('/hello', async (req, res) => {
+    const { blogTitle, blogSubtitle, blogDescription, blogComment, image } = req.body;
+    console.log("hellooooooghfgjhg",req.body)
+    // console.log("qwertyuiopiuytrewqwertyuiopoiuytrewqwertyuiopoiuytwqwertyuiopoiuytrewqwertyuiopoiuytrew")
+    
     try {
         // Check if any of the fields are empty
         if (!blogTitle || !blogSubtitle || !blogDescription || !blogComment) {
@@ -30,8 +32,9 @@ router.post('/hello', async (req, res) => {
         }
 
         // Create and save the new blog
-        const blog = new Blog({ blogTitle, blogSubtitle, blogDescription, blogComment });
+        const blog = new Blog({ blogTitle, blogSubtitle, blogDescription, blogComment, image });
         await blog.save();
+
 
         res.status(201).json({ message: "Blog Uploaded Successfully" });
     } catch (error) {
@@ -39,5 +42,6 @@ router.post('/hello', async (req, res) => {
         res.status(500).json({ error: "Internal Server Error", details: error });
     }
 });
+
 
 module.exports = router;
