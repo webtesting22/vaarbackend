@@ -9,18 +9,19 @@ dotenv.config({ path: './config.env' });
 require('./db/conn');
 app.use(express.json());
 const allowedOrigins = [
-    // "http://localhost:5173",
-    // "https://vaar-web-project.vercel.app",
-    // "https://www.vaar.co/",
-    "*"
-  ];
+  "http://localhost:5173",
+  "https://vaar-web-project.vercel.app",
+  "https://www.vaar.co/",
+];
   // const allowed_headers=["*"]
   app.use(
     cors({
-      origin: allowedOrigins,
-      credentials: true,
+        origin: allowedOrigins,
+        credentials: true,
+        allowedHeaders: "*",
     })
-  );
+);
+
 const Blog = require('./modal/BlogSchema');
 app.use(require('./router/auth'));
 const PORT = process.env.PORT;
