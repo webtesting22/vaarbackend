@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const Blog = require('../modal/BlogSchema'); // Import the Blog model
+
+
 require('../db/conn');
 
 router.get('/', (req, res) => {
